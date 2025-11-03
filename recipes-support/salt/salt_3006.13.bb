@@ -1,7 +1,7 @@
 HOMEPAGE = "http://saltstack.com/"
 SECTION = "admin"
 LICENSE = "Apache-2.0"
-LIC_FILES_CHKSUM = "file://LICENSE;md5=c996f5a78d858a52c894fa3f4bec68c1"
+LIC_FILES_CHKSUM = "file://LICENSE;md5=3ab0f85f9c3b3eb8184e17b99fd4dfb2"
 DEPENDS = "\
     python3-msgpack \
     python3-pyyaml \
@@ -18,7 +18,7 @@ PACKAGECONFIG[tcp] = ",,python3-pycryptodome"
 PACKAGECONFIG[zeromq] = ",,python3-pycryptodome python3-pyzmq"
 
 SRC_URI = "\
-    git://github.com/ni/salt.git;protocol=https;branch=ni/master/3000.2 \
+    git://github.com/AlexDanDuna/salt.git;protocol=https;branch=ni/master/3006.13 \
     file://minion \
     file://salt-minion \
     file://salt-common.bash_completion \
@@ -78,6 +78,9 @@ do_install:append() {
     install -d ${D}${PYTHON_SITEPACKAGES_DIR}/${PN}-tests/
     cp -r ${S}/tests/ ${D}${PYTHON_SITEPACKAGES_DIR}/${PN}-tests/
 
+    # This triggered build error because it was not included in any packages, so removing it here
+    rm -f ${D}/usr/bin/salt-pip
+
     # The Salt SysV scripts require that the process name of the salt
     # components have the form "salt-<component>".
     # The current python shebangs on the salt components scripts spwans
@@ -122,7 +125,7 @@ RDEPENDS:${PN}-common = "\
     python3-fcntl \
     python3-jinja2 \
     python3-pyyaml \
-    python3-requests (>= 1.0.0) \
+    python3-requests (>= 2.32.3) \
     python3-singledispatch (>= 3.4.0.3) \
     python3-tornado (>= 4.2.1) \
 "
