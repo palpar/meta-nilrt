@@ -124,6 +124,8 @@ RDEPENDS:${PN}-common = "\
     python3-dateutil \
     python3-fcntl \
     python3-jinja2 \
+    python3-looseversion \
+    python3-packaging \
     python3-pyyaml \
     python3-requests (>= 2.32.3) \
     python3-singledispatch (>= 3.4.0.3) \
