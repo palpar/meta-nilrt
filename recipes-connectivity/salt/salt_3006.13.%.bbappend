@@ -1,8 +1,8 @@
-LIC_FILES_CHKSUM = "file://LICENSE;md5=c996f5a78d858a52c894fa3f4bec68c1"
+LIC_FILES_CHKSUM = "file://LICENSE;md5=3ab0f85f9c3b3eb8184e17b99fd4dfb2"
 
 FILESEXTRAPATHS_prepend := "${THISDIR}/files:"
 
-SRC_URI = "git://github.com/ni/salt.git;protocol=https;branch=ni/master/2018.3 \
+SRC_URI = "git://github.com/AlexDanDuna/salt.git;protocol=https;branch=ni/master/3006.13 \
            file://set_python_location_hashbang.patch \
            file://minion \
            file://salt-minion \
@@ -48,11 +48,14 @@ RDEPENDS_${PN}-common_append += " \
     python3-dateutil \
     python3-difflib \
     python3-distutils \
+    python3-looseversion \
     python3-misc \
     python3-multiprocessing \
+    python3-packaging \
     python3-profile \
     python3-pyiface \
     python3-resource \
+    python3-requests \
     python3-terminal \
     python3-unixadmin \
     python3-xmlrpc \
