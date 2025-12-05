@@ -121,15 +121,21 @@ RDEPENDS:${PN}-common = "\
     python3-backports-ssl-match-hostname \
     python3-charset-normalizer \
     python3-core \
+    python3-croniter (>= 0.3.23) \
     python3-dateutil \
     python3-fcntl \
     python3-jinja2 \
     python3-looseversion \
+    python3-markupsafe \
     python3-packaging \
+    python3-psutil (>= 5.0.0) \
+    python3-pycryptodomex (>= 3.9.8) \
     python3-pyyaml \
+    python3-pyopenssl (>= 24.0.0) \
     python3-requests (>= 2.32.3) \
     python3-singledispatch (>= 3.4.0.3) \
     python3-tornado (>= 4.2.1) \
+    python3-urllib3 \
 "
 RRECOMMENDS:${PN}-common = "lsb-release"
 RSUGGESTS:${PN}-common = "python3-mako python3-git"
