@@ -129,7 +129,6 @@ RDEPENDS:${PN}-common = "\
     python3-markupsafe \
     python3-packaging \
     python3-psutil (>= 5.0.0) \
-    python3-pycryptodomex (>= 3.9.8) \
     python3-pyyaml \
     python3-pyopenssl (>= 24.0.0) \
     python3-requests (>= 2.32.3) \
